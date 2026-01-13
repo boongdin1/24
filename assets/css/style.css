@@ -446,6 +446,10 @@ section .sec-header .sub-title{
     align-items: center;
     justify-content: space-between;
     background: var(--accent-color-5);
+    background-image: url(../images/mobile_yt_banner.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 #main .main-banner .banner-list li.yt-banner .text strong{
     color:#fff;
@@ -513,18 +517,22 @@ section .sec-header .sub-title{
         background-color: var(--accent-color-1);
     }
     #main .hero .slide-controls button.btn-prev{
+        border:1px solid var(--text-sub-1);
         background-image: url(../images/icon_slide_prev_off.svg);
         background-position: left 14.5px center;
     }
     #main .hero .slide-controls button.btn-prev:hover{
         background-image: url(../images/icon_slide_prev.svg);
+        border-color: var(--accent-color-1);
     }
     #main .hero .slide-controls button.btn-next{
+        border:1px solid var(--text-sub-1);
         background-image: url(../images/icon_slide_next_off.svg);
-        background-position: right 14.5px center;
+        background-position: right 13.5px center;
     }
     #main .hero .slide-controls button.btn-next:hover{
         background-image: url(../images/icon_slide_next.svg);
+        border-color: var(--accent-color-1);
     }
     #main .hero .slide-controls .slide-pagination{
         margin-left: 8px;
@@ -624,6 +632,9 @@ section .sec-header .sub-title{
     }
     #main .main-banner .banner-list li.inquiry-banner{
         background: var(--bg-1) url(../images/tablet_inquiry_banner.png) no-repeat right 8px bottom / auto 100%;
+    }
+    #main .main-banner .banner-list li.yt-banner{
+        background: var(--accent-color-5) url(../images/tablet_yt_banner.png) no-repeat center center / cover;
     }
     #main .main-banner .banner-list li.yt-banner{
         padding-right: 0;
@@ -747,6 +758,8 @@ section .sec-header .sub-title{
         padding:0;
         opacity: 0;
         transition: 0.3s ease-out;
+        box-sizing: border-box;
+        border:1px solid var(--text-sub-1)
     }
     #main .review .sec-content:hover .btn-prev,
     #main .review .sec-content:hover .btn-next{
@@ -755,20 +768,22 @@ section .sec-header .sub-title{
     #main .review .btn-prev{
         left:0;
         transform: translate(calc(-100% - 15px),-50%);
-        background: var(--bg-1) url(../images/icon_slide_prev_off.svg) no-repeat center center;
+        background: var(--bg-1) url(../images/icon_slide_prev_off.svg) no-repeat left 14.5px center;
     }
     #main .review .btn-next{
         right:0;
         transform: translate(calc(100% + 15px),-50%);
-        background: var(--bg-1) url(../images/icon_slide_next_off.svg) no-repeat center center;
+        background: var(--bg-1) url(../images/icon_slide_next_off.svg) no-repeat right 13.5px center;
     }
     #main .review .btn-prev:hover{
         background-image: url(../images/icon_slide_prev.svg);
         background-color: var(--accent-color-1);
+        border-color: var(--accent-color-1);
     }
     #main .review .btn-next:hover{
         background-image: url(../images/icon_slide_next.svg);
         background-color: var(--accent-color-1);
+        border-color: var(--accent-color-1);
     }
     
     .review-slide{
@@ -787,6 +802,9 @@ section .sec-header .sub-title{
     }
     #main .main-banner .banner-list li.inquiry-banner{
         background:var(--bg-1) url(../images/desktop_inquiry_banner.png) no-repeat right 7px bottom / auto 100%
+    }
+    #main .main-banner .banner-list li.yt-banner{
+        background: var(--accent-color-5) url(../images/desktop_yt_banner.png) no-repeat center center / cover;
     }
     #main .main-banner .banner-list li.yt-banner .yt-slide .swiper-slide{
         width: 144px;
@@ -875,6 +893,7 @@ section .sec-header .sub-title{
 #about .sec-1 .sign-img img{
     max-width: 100%;
     max-height: 100%;
+    display: block;
     object-fit: cover;
 }
 #about .sec-2{
@@ -890,9 +909,9 @@ section .sec-header .sub-title{
 }
 #about .sec-2::after{
     position: absolute;
-    left:0;
+    right:0;
     bottom:0;
-    transform: translate(-30%,10%);
+    transform: translate(30%,10%);
     width: 134vw;
     aspect-ratio: 1097 / 966;
     background: url(../images/about_logo.svg) no-repeat center center / cover;
@@ -970,7 +989,7 @@ section .sec-header .sub-title{
         padding:60px 0 ;
     }
     #about .sec-2::after{
-        transform: translate(-24%,32%);
+        transform: translate(24%,32%);
         width: 116vw;
     }
     #about .sec-2 h4{
@@ -1064,7 +1083,7 @@ section .sec-header .sub-title{
         padding: 100px 0;
     }
     #about .sec-2::after{
-        transform: translate(-6.3%,6.3%);
+        transform: translate(6.3%,6.3%);
         width: 1097px;
     }
     #about .sec-2 h4{
@@ -1496,7 +1515,7 @@ section .sec-header .sub-title{
     box-sizing: border-box;
     text-align: left;
     background-color: transparent;
-    color:var(--text-sub-1);
+    color:var(--text-sub-2);
     position: relative;
     cursor: pointer;
 }
@@ -1544,7 +1563,7 @@ section .sec-header .sub-title{
     letter-spacing: -0.04em;
 }
 #board .category-list .cate-list ul li a.cur{
-    color:var(--text-sub-1);
+    color:var(--text-black);
     font-weight: 700;
 }
 #board .category-list .cate-list .depth{
@@ -1669,7 +1688,7 @@ section .sec-header .sub-title{
     font-weight: 500;
     font-size: 15px;
     letter-spacing: -0.04em;
-    color:var(--text-sub-1);
+    color:var(--text-sub-2);
     cursor: pointer;
     position: relative;
 }
@@ -1695,16 +1714,18 @@ section .sec-header .sub-title{
 }
 .board-view .article-index .index-list a{
     display: block;
-    color:var(--text-beige-3);
+    color:var(--text-sub-2);
     font-weight: 500;
     font-size: 15px;
     line-height: 1.9em;
     letter-spacing: -0.04em;
     transition: color 0.3s ease-out;
 }
-.board-view .article-index .index-list a:hover,
+.board-view .article-index .index-list a:hover{
+    color:var(--accent-color-1)
+}
 .board-view .article-index .index-list a.cur{
-    color:var(--accent-color-2);
+    color:var(--text-black);
 }
 .board-view .article-index .btn-index.active{
     border-radius: 8px 8px 0 0;
@@ -1762,7 +1783,6 @@ section .sec-header .sub-title{
 .board-view .category-article .btn-article{
     width: 100%;
     box-sizing: border-box;
-    background-color: var(--bg-beige-1);
     text-align: left;
     border:0;
     padding:0 20px;
@@ -1770,7 +1790,8 @@ section .sec-header .sub-title{
     font-weight: 500;
     font-size: 15px;
     letter-spacing: -0.04em;
-    color: var(--accent-color-2);
+    color: var(--text-sub-2);
+    background-color: transparent;
     cursor: pointer;
     position: relative;
 }
@@ -1796,7 +1817,7 @@ section .sec-header .sub-title{
 }
 .board-view .category-article .article-list a{
     display: block;
-    color: var(--text-brown-1);
+    color: var(--text-sub-2);
     font-size: 15px;
     line-height: 1.6em;
     padding:7px 20px;
@@ -1808,6 +1829,7 @@ section .sec-header .sub-title{
 }
 .board-view .category-article .article-list a.cur{
     font-weight: 700;
+    color:var(--text-black)
 }
 .board-view .category-article .btn-article.active{
     border-radius: 8px 8px 0 0;
@@ -1830,6 +1852,7 @@ section .sec-header .sub-title{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 40px;
 }
 .board-view .writer .thumb{
     margin-bottom: 8px;
@@ -2117,11 +2140,14 @@ section .sec-header .sub-title{
         opacity: 0;
         pointer-events: none;
         transform: translate(0, -50%);
-        transition: opacity 0.3s ease-out, background 0.3s ease-out;
+        transition: opacity 0.3s ease-out, background 0.3s ease-out, border 0.3s ease-out;
+        box-sizing: border-box;
+        border:1px solid var(--text-sub-1);
     }
     #board .posts .sec-content .btn-next:hover,
     #board .posts .sec-content .btn-prev:hover{
         background-color: var(--accent-color-1);
+        border-color: var(--accent-color-1);
     }
     #board .posts .slide-wrap:hover .btn-prev,
     #board .posts .sec-content:hover .btn-next{
@@ -2131,10 +2157,12 @@ section .sec-header .sub-title{
     #board .posts .sec-content .btn-prev{
         left: 0;
         background-image: url(../images/icon_slide_prev_off.svg);
+        background-position: left 13.5px center;
     }
     #board .posts .sec-content .btn-next{
         right: 0;
         background-image: url(../images/icon_slide_next_off.svg);
+        background-position: right 12.5px center;
     }
     #board .posts .sec-content .btn-prev:hover{
         background-image: url(../images/icon_slide_prev.svg);
